@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "build": "npx webpack --mode development --cli webpack-cli@6.0.1",
+    "build": "npx webpack --mode development",
     "start": "webpack-dev-server --mode development --open"
   },
   "keywords": [],
