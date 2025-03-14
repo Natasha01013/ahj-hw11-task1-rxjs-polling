@@ -1,7 +1,7 @@
 # CI test
 [![Build status](https://ci.appveyor.com/api/projects/status/lhcvrj71ho2ew70o?svg=true)](https://ci.appveyor.com/project/Natasha01013/ahj-hw11-task1-rxjs-polling)
 
-[Github Pages ]()
+[Github Pages ](https://natasha01013.github.io/ahj-hw11-task1-rxjs-polling/)
 
 # Домашнее задание к занятию "11. RxJS"  
 
