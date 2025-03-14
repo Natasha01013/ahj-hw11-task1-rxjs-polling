@@ -12,7 +12,7 @@ cache: # кеширование, чтобы node_modules работал быст
   - 'src\server\node_modules' 
 
 install:
-  - npm install-all  # команда установки зависимостей, указанных в файле package.json и клиентской, и серверной части
+  - npm run install-all  # команда установки зависимостей, указанных в файле package.json и клиентской, и серверной части
 
 build_script: #секция, в которой указаны команды для сборки проекта
   - npm run build-client   # команда сборки из файла package.json клиентской части
