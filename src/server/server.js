@@ -15,20 +15,21 @@ app.get('/messages/unread', (req, res) => {//Определяем маршрут
   for (let i = 0; i < messageCount; i++) {
     messages.push({
       id: uuidv4(), //Генерируем уникальный идентификатор с помощью uuidv4()
+      //allowSpecialCharacters: false - значит, что email-адреса не будут содержать специальные символы перед символом @
       from: faker.internet.email({ allowSpecialCharacters: false }), //Генерируем случайный email-адрес с помощью faker.internet.email()
       subject: faker.lorem.sentence(), //Генерируем случайный заголовок с помощью faker.lorem.sentence()
       body: faker.lorem.paragraphs(),//Генерируем случайный текст сообщения
-      received: faker.date.past().getTime() / 1000,//Генерируем случайную дату получения сообщения в формате timestamp
+      received: faker.date.past().getTime() / 1000,//Генерируем случайную дату получения сообщения в прошлом в формате timestamp и делим результат на 1000, чтобы получить секунды
     });
   }
 
   res.json({ //Отправляем ответ в формате JSON
     status: 'ok',
-    timestamp: Date.now() / 1000,
+    timestamp: Date.now() / 1000, //Делим результат на 1000, чтобы получить секунды
     messages,
   });
 });
 
-app.listen(port, () => {
+app.listen(port, () => { //Запускаем сервер на указанном порту (3000)
   console.log(`Server listening at http://localhost:${port}`);
 });

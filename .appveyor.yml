@@ -6,13 +6,16 @@ branches: # какие ветки git отслеживаются
     - master  # ветка git
     - main
 
-cache: node_modules  # кеширование, чтобы node_modules работал быстрее
+cache: # кеширование, чтобы node_modules работал быстрее
+  - '%LOCALAPPDATA%\npm-cache'
+  - 'src\client\node_modules'
+  - 'src\server\node_modules' 
 
 install:
-  - npm install  # команда установки зависимостей, указанных в файле package.json
+  - npm install-all  # команда установки зависимостей, указанных в файле package.json и клиентской, и серверной части
 
 build_script: #секция, в которой указаны команды для сборки проекта
-  - npm run build   # команда сборки из файла package.json
+  - npm run build-client   # команда сборки из файла package.json клиентской части
 
 test_script: #секция, в которой указаны команды для тестирования проекта
   - npm run lint  # скрипт тестирования
