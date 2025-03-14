@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "install-all": "npm install --prefix client && npm install --prefix server",
+    "install-all": "npm install --prefix src/client && npm install --prefix src/server",
     "build-client": "npm run build --prefix src/client",
     "start-server": "npm run start --prefix src/server",
     "start-client": "npm run start --prefix src/client"
