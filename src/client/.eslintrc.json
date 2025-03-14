@@ -1,0 +1,13 @@
+{
+  "env": {
+    "browser": true, //код может быть выполнен в браузере, поэтому глобальные объекты window, document и др, разрешены
+    "es2021": true, //код будет использовать возможности ECMAScript 2021
+    "node": true //сообщает ESLint, что код будет работать в среде Node.js
+  },
+  "extends": "eslint:recommended", //нужно использовать рекомендованные правила ESLint
+  "parserOptions": { //опции парсера для синтаксиса
+    "ecmaVersion": "latest", //ESLint должен поддерживать последние возможности JavaScript
+    "sourceType": "module" //сообщает ESLint, что код использует модули ECMAScript (import/export), а не CommonJS 
+  },
+  "rules": {} //в этом объекте можно настроить или переопределить конкретные правила линтинга
+}
